@@ -6,3 +6,6 @@ var ext = p.extname(addr)
 console.log(dir)
 console.log(base)
 console.log(ext)
+
+var parsed = p.parse(addr)
+console.log(parsed)
