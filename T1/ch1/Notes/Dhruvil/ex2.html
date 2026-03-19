@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id='click' onclick="clicked()">Click here</button>
+
+    <script>
+        var obj = '{"name":"NAS", "subject": "FSD2", "exam":"2026-04-15"}'
+        function clicked() {
+            data = JSON.parse(obj)
+            for (key in data) {
+                if (key == 'name') {
+                    document.writeln(`<h1>${key} - ${data[key]} </h1>`)
+                    continue
+                }
+                document.writeln(`<p> ${key} - ${data[key]} </p>`)
+            }
+        }
+    </script>
+</body>
+
+</html>

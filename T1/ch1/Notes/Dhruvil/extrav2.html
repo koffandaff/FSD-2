@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const data2 = {
+            'FSD': [
+                {
+                    "topic": "JSon",
+                    "Phase": "T1",
+                    "content": ["object", "array"],
+                },
+                {
+                    "topic": "NodeJs",
+                    "Phase": "T1",
+                    "content": ["HTTP module", "FS module"]
+                }
+            ]
+        }
+
+        const fsdData = data2.FSD;
+
+        document.writeln('<table border="3" cellpadding="10"> ');
+        document.writeln('<tr>');
+
+
+        for (let key in fsdData[0]) {
+            document.writeln(`<th> ${key} </th>`);
+        }
+        document.writeln('</tr>');
+
+
+        fsdData.forEach(item => {
+            document.writeln('<tr>');
+            for (let key in item) {
+                document.writeln(`<td> ${item[key]} </td>`);
+            }
+            document.writeln('</tr>');
+        });
+
+        document.writeln('</table>');
+    </script>
+</body>
+
+</html>

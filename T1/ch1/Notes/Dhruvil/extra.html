@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // making table of json
+        const data = {
+            'Name': 'Dhruvil',
+            'Age': 20,
+            'Interest': ['FOotball', 'F1'],
+
+            'Pass': true
+        }
+
+        document.writeln('<table border="1" cellpadding="15">')
+        document.write('<tr>')
+        for (key in data) {
+            document.write(`<th> ${key} </th>`)
+        }
+        document.write('</tr>')
+        document.write('<tr>')
+        for (key in data) {
+            document.write(`<td> ${data[key]} </td>`)
+        }
+        document.write('</tr>')
+        document.write('</table>')
+
+
+        const data2 = {
+            'FSD': [
+                {
+                    "topic": "JSon",
+                    "Phase": "T1",
+                    "content": ["object", "array"],
+                },
+                {
+                    "topic": "NodeJs",
+                    "Phase": "t1",
+                    "Content": ["HTTP module", "FS module"]
+                }
+            ]
+        }
+        // another table
+        document.wirteln('<table border="3" cellpadding="10"> ')
+        document.write('<tr')
+        for (key in data[0]) {
+            document.wirteln(`<th> ${key} </th>`)
+        }
+        document.write('</tr>')
+        document.write('<tr>')
+        for (key in data[0]) {
+            document.wirteln(`<td> ${data[key]} </td>`)
+        }
+        document.write('</tr>')
+        document.write('<tr>')
+        for (key in data[1]) {
+            document.wirteln(`<td> ${data[key]} </td>`)
+        }
+        document.write('</tr>')
+        document.write('</table>')
+    </script>
+</body>
+
+</html>
